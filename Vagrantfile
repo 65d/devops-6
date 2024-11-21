@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/ubuntu-22.04-arm64"
+  config.vm.box = "generic/ubuntu2204"
 
   config.vm.provider "vmware_desktop" do |v|
     v.memory = 1024
@@ -44,33 +44,3 @@ Vagrant.configure("2") do |config|
 
   SHELL
 end
-
-
-# Vagrant.configure("2") do |config|
-#   config.vm.box = "bento/ubuntu-22.04-arm64"
-#   config.vm.network "forwarded_port", guest: 80, host: 8888
-
-#   config.vm.provider "vmware_desktop" do |v|
-#     v.memory = 1024
-#     v.cpus = 2
-#   end
-
-#   # config.vm.disk :disk, size: "500MB", name: "extra_storage1"
-#   # config.vm.disk :disk, size: "500MB", name: "extra_storage2"
-#   # config.vm.disk :disk, size: "500MB", name: "extra_storage3"
-#   # config.vm.disk :disk, size: "500MB", name: "extra_storage4"
-
-#   config.vm.provision "shell", inline: <<-SHELL
-    
-#     sudo apt update
-#     sudo apt install -y nginx
-
-
-#     echo "Welcome to NGINX on Vagrant!" > /var/www/html/index.html
-
-
-#     sudo systemctl restart nginx
-#     sudo systemctl enable nginx
-#     sudo ufw disable
-#   SHELL
-# end
