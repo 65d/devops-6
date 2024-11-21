@@ -5,7 +5,7 @@ This Vagrantfile sets up an Ubuntu 22.04 virtual machine with LVM (Logical Volum
 ## Prerequisites
 
 - [Vagrant](https://www.vagrantup.com/downloads)
-- [Oracle VB](https://www.virtualbox.org) (and the Vagrant VMware Desktop plugin)
+- [Oracle VB](https://www.virtualbox.org) 
 
 ## Usage
 
